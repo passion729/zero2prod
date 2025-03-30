@@ -1,6 +1,6 @@
 use actix_web::{HttpResponse, web};
 use sqlx::PgPool;
-use sqlx::types::chrono::Utc;
+use chrono::Utc;
 use sqlx::types::uuid;
 use uuid::Uuid;
 
