@@ -11,10 +11,10 @@ path = "src/main.rs"
 name = "zero2prod"
 
 [dependencies]
-actix-web = { version = "4" }
+actix-web = "4"
 serde = { version = "1", features = ["derive"] }
 tokio = { version = "1", features = ["macros", "rt-multi-thread"]}
-config = "0.14"
+config = "0.15"
 uuid = { version = "1", features = ["v4"]}
 chrono = { version = "0.4", default-features = false, features = ["clock"]}
 
