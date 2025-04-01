@@ -4,7 +4,7 @@ use sqlx::PgPool;
 use sqlx::types::uuid;
 use unicode_segmentation::UnicodeSegmentation;
 use uuid::Uuid;
-use crate::domain::{NewSubscriber, SubscriberEmail, SubscriberName};
+use crate::domain::NewSubscriber;
 
 #[derive(serde::Deserialize)]
 pub struct FormData {
