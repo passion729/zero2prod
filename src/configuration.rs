@@ -1,9 +1,9 @@
+use crate::domain::SubscriberEmail;
 use secrecy::{ExposeSecret, Secret};
 use serde::Deserialize;
 use serde_aux::prelude::deserialize_number_from_string;
-use sqlx::ConnectOptions;
 use sqlx::postgres::{PgConnectOptions, PgSslMode};
-use crate::domain::SubscriberEmail;
+use sqlx::ConnectOptions;
 
 #[derive(Deserialize, Clone)]
 pub struct Settings {
@@ -35,6 +35,7 @@ pub struct ApplicationSettings {
     #[serde(deserialize_with = "deserialize_number_from_string")]
     pub port: u16,
     pub host: String,
+    pub base_url: String,
 }
 
 #[derive(Deserialize, Clone)]
